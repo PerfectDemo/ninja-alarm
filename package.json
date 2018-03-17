@@ -1,0 +1,29 @@
+{
+  "name": "ninja-alarm",
+  "version": "1.0.0",
+  "description": "a alarm app with electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack-win32": "electron-packager . ninja-alarm --platform=win32 -out ./output --version 0.1.0  --asar",
+  	"pack-linux": "electron-packager . ninja-alarm --platform=linux -out ./output --version 0.1.0  --asar"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "PerfectDemo",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-packager": "^11.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "nconf": "^0.10.0"
+  }
+}

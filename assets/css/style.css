@@ -1,0 +1,287 @@
+body,div,span,a, p, ul, li, input {
+	padding:0;
+	margin:0;
+}
+
+.container {
+	margin: 0 auto;	
+	background: DodgerBlue;
+}
+
+/* 整个头部 */
+.header {
+	display: flex;
+	flex-direction: row;	
+	height: 3em;		
+	-webkit-app-region: drag;
+}
+
+/* 左上角tab */
+.header .tab.active {
+	border-bottom: solid .2em white;	
+	background: DeepSkyBlue;
+}
+
+.header .tab  p{
+	color: white;
+	font-family: "Microsoft YaHei", "微软雅黑";
+	font-weight: bold;
+}
+
+.header .tab,.tail  {
+	padding: .8em;
+	-webkit-app-region:  no-drag;
+}
+
+.header .tail:hover {
+	background: DeepSkyBlue;
+}
+
+/* 尾巴 */
+.header .tail img{
+	width: 1.5em;
+	height: 1.5em;
+	color: white;
+}
+
+.header .center {
+	flex: 1;
+}
+
+/*
+.swiper {
+	height: .2em;
+	background: red;
+}
+
+.swiper .swiper-bar {
+	background: white;
+	width: 5.5em;
+	height: .2em;
+}
+*/
+
+.main {
+	display: flex;
+	background: #f9f9f9;	
+	height: 300px;	
+	
+}
+
+.main .work {
+	flex: 7;
+	background: white;	
+	margin: .8em;
+	border-radius: 5px 5px 5px 5px;	
+	box-shadow: 0 1px 2px rgba(25,25,25,0.2);
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.main .work .time {
+	flex: 7;
+	margin: 0 .8em;
+	border-bottom: solid .1em rgba(25,25,25,0.1);
+	
+	display: flex;
+	flex-direction: row;
+}
+
+/* 时钟大数字样式 */
+.main .work .time .number {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	margin: 3em 0;
+}
+
+.main .work .time .number  input{
+	display: block;	
+	width: 5rem;
+	font-size: 4.5rem;
+	height: 5rem;
+	border: none;
+	outline: 0;
+	/*border-bottom: solid .2rem #19abff;*/
+	
+	
+}
+
+
+.main .work .time .number  input:focus{	
+	border-bottom: solid .2rem #19abff;
+}
+
+.main .work .time .number  input:disabled{	
+	background: none;
+	color: black;
+}
+
+
+
+.main .work .time .number:focus {	
+	outline: 0;
+	border-bottom: solid .25rem DodgerBlue;
+}
+
+.main  .work .time .apm {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-right: .5em;
+}
+
+.main  .work .time .apm  p{
+	font-size: 1.15rem;
+	color: gray;
+}
+
+.main  .work .time .apm  p.active {	
+	color: black;
+}
+
+/* 大时钟 ：的样式*/
+.main .work .split {
+	padding: 0 1em;
+	padding-bottom: .5em;
+	display: flex;
+	align-items: center;
+}
+
+.main .work .split  p{
+	font-size: 5rem;
+}
+
+.main .work .operate {
+	flex: 3;
+	margin: 0 .8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main .work .operate img {
+	width: 3em;
+	height: 3em;
+	color: white;
+	padding: .5em;
+	margin: .5em;
+}
+
+/* 右侧时间槽 */
+.main .stack {
+	flex: 3;	
+	background: white;	
+	margin: .8em;
+	margin-left: 0;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 1px 2px rgba(25,25,25,0.2);
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.main .stack .stack-item {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1em;
+	border-top: solid .1em rgba(25,25,25,0.1);
+	position: relative;
+}
+
+.main .stack .stack-item:hover  {
+	background: rgba(25,25,25,0.1);	
+}
+
+/* 右边菜单 */
+.main .stack .stack-item:hover > ul{
+	visibility: visible;	
+}
+
+.main .stack .stack-item  ul {
+	visibility: hidden;	
+	position: absolute;
+	left: -50%;
+	top: .5em;
+	overflow: hidden;
+	padding: .2em .2em;
+	
+	background: white;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 1px 2px rgba(25,25,25,0.2);
+	z-index: 99999;
+	list-style-type: none;
+	
+}
+
+.main .stack .stack-item:nth-last-child(1)  ul{	
+	top: -100%;
+}
+
+.main .stack .stack-item:nth-last-child(2)  ul {	
+	top: -20%;
+}
+
+.main .stack .stack-item  ul li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	height: 2em;
+	width: 5em;
+	
+	border-top: solid .1em rgba(25,25,25,0.1);	
+	text-align: center;		
+	
+}
+
+.main .stack .stack-item  ul li:hover {
+	background: rgba(25,25,25,0.1);
+}
+
+.main .stack .stack-item  ul li:hover  a{
+	color: white;
+}
+
+.main .stack .stack-item  ul li a{
+	text-decoration: none;
+	font-family: "Microsoft YaHei", "微软雅黑";
+	font-weight: light;
+	color: gray;	
+}
+
+.main .stack .stack-item  ul li:first-child{
+	border-top: none;
+}
+
+.main .stack .stack-item:first-child {
+	border-top: none;
+}
+
+.main .stack .stack-item img {
+	width: 1.5em;
+	height: 1.5em;
+	color: white;
+	padding: .3em;
+	margin: .3em;
+}
+
+.main .stack .stack-item img:hover {
+	background: rgba(25,25,25,0.1);	
+}
+
+.tab .background {
+	
+}
+
+
+
+
+
+
+

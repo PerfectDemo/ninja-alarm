@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+	<div class="container">
+		<div class="header">
+			<div class="tab" data-type="timing">
+				<p>¶¨Ê±ÄÖÖÓ</p>
+			</div>
+			<div class="tab  active" data-type="delay">
+				<p>ÑÓÊ±ÄÖÖÓ</p>
+			</div>
+			<div class="center"></div>
+			<div class="tail" id="settingBtn">
+				<img src="./img/set_white.png"></img>
+			</div>
+			<div class="tail" id="closeBtn">
+				<img src="./img/close_white.png"></img>
+			</div>
+		</div>
+		<!--
+		<div class="swiper">
+		  <div class="swiper-bar"></div>
+		</div>
+		-->
+		<div class="main" id="timing">
+		  <div class="work">
+			<div class="time">
+				<div class="apm">
+					<p class="active">AM</p>
+					<p>PM</p>
+				</div>
+				<div class="number">
+					<input type="text" size="2" class="input-number"  id="timing-hour-number" value="00"/>
+				</div>
+				<div class="split"><p>:</p></div>
+				<div class="number">
+					<input type="text" size="2"  class="input-number"  id="timing-minute-number" value="00"/>
+				</div>
+				<div class="split"><p>:</p></div>
+				<div class="number">
+					<input type="text" size="2"  class="input-number"  id="timing-second-number" value="00"/>
+				</div>
+			</div>
+			<div class="operate">
+				<img id="timingPlay" src="./img/play.png"></img>				
+				<img id="timingDelete" src="./img/delete.png"></img>
+			</div>
+		  </div>
+		  <div class="stack">
+			<div class="stack-item" name="item_0">
+				<ul>
+					<li><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li><a href="javascript:void(0)">±à¼­</a></li>
+					<li><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p style="display:none">00:00:00 AM</p>
+				<img name="plus0" src="./img/plus.png" />
+			</div>
+			<div class="stack-item" name="item_1">
+				<ul>
+					<li><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li><a href="javascript:void(0)">±à¼­</a></li>
+					<li><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p  style="display:none">00:00:00 PM</p>
+				<img name="plus1" src="./img/plus.png" />
+			</div>
+			<div class="stack-item" name="item_2">
+				<ul>
+					<li><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li><a href="javascript:void(0)">±à¼­</a></li>
+					<li><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p  style="display:none">00:00:00</p>
+				<img name="plus2" src="./img/plus.png" />
+			</div>
+			<div class="stack-item" name="item_3">
+				<ul>
+					<li><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li><a href="javascript:void(0)">±à¼­</a></li>
+					<li><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p style="display:none">00:00:00</p>
+				<img name="plus3" src="./img/plus.png" />
+			</div>
+			<div class="stack-item" name="item_4">
+				<ul>
+					<li><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li><a href="javascript:void(0)">±à¼­</a></li>
+					<li><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p style="display:none">00:00:00</p>
+				<img name="plus4" src="./img/plus.png" />
+				</div>				
+		  </div>
+		</div>
+		<div class="main" id="delay">
+		  <div class="work">
+			<div class="time">				
+				<div class="number">
+					<input type="text" size="2" class="input-number"  id="delay-hour-number" value="00"/>
+				</div>
+				<div class="split"><p>:</p></div>
+				<div class="number">
+					<input type="text" size="2"  class="input-number"  id="delay-minute-number" value="00"/>
+				</div>
+				<div class="split"><p>:</p></div>
+				<div class="number">
+					<input type="text" size="2"  class="input-number"  id="delay-second-number" value="00"/>
+				</div>
+			</div>
+			<div class="operate">
+				<img id="delayPlay" src="./img/play.png"></img>				
+				<img id="delayDelete" src="./img/delete.png"></img>
+			</div>
+		  </div>
+		  <div class="stack">
+			<div class="stack-item" name="item_0">
+				<ul>
+					<li data-type="delay_pause"><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li data-type="delay_edit"><a href="javascript:void(0)">±à¼­</a></li>
+					<li data-type="delay_delete"><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p style="display:none">00:00:00 AM</p>
+				<img name="plus0" src="./img/plus.png" />
+			</div>
+			<div class="stack-item" name="item_1">
+				<ul>
+					<li data-type="delay_pause"><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li data-type="delay_edit"><a href="javascript:void(0)">±à¼­</a></li>
+					<li data-type="delay_delete"><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p  style="display:none">00:00:00 PM</p>
+				<img name="plus1" src="./img/plus.png" />
+			</div>
+			<div class="stack-item" name="item_2">
+				<ul>
+					<li data-type="delay_pause"><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li data-type="delay_edit"><a href="javascript:void(0)">±à¼­</a></li>
+					<li data-type="delay_delete"><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p  style="display:none">00:00:00</p>
+				<img name="plus2" src="./img/plus.png" />
+			</div>
+			<div class="stack-item" name="item_3">
+				<ul>
+					<li data-type="delay_pause"><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li data-type="delay_edit"><a href="javascript:void(0)">±à¼­</a></li>
+					<li data-type="delay_delete"><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p style="display:none">00:00:00</p>
+				<img name="plus3" src="./img/plus.png" />
+			</div>
+			<div class="stack-item" name="item_4">
+				<ul>
+					<li data-type="delay_pause"><a href="javascript:void(0)">ÔÝÍ£</a></li>
+					<li data-type="delay_edit"><a href="javascript:void(0)">±à¼­</a></li>
+					<li data-type="delay_delete"><a href="javascript:void(0)">É¾³ý</a></li>
+				</ul>
+				<p style="display:none">00:00:00</p>
+				<img name="plus4" src="./img/plus.png" />
+				</div>				
+		  </div>
+		</div>
+	</div>
+  </body>  
+   <script type="text/javascript" charset="utf-8">
+		require('./js/delay.js');
+		require('./js/timing.js');
+   </script>
+</html>

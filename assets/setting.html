@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./css/setting.css" />
+	</head>
+	<body>
+		<div>
+			<input type="checkbox" name="playVoice" id="playVoice"/>
+			<label for="playVoice" >播放声音</label>
+		</div>
+	<!--	<div>
+			<input type="checkbox" name="openFile" id="openFile"/>
+			<label for="openFile" >打开文件</label>
+		</div> -->
+		
+		<div>
+			<input type="checkbox" name="shutdown" id="shutdown"/>
+			<label for="shutdown" >关机</label>
+		</div>
+<script type="text/javascript">
+window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.min.js');
+var electron = require('electron');
+var ipcRenderer = electron.ipcRenderer,
+	BrowserWindow = electron.remote.BrowserWindow;
+var util = require('util');
+
+$(function() {
+	var $playVoice = $('#playVoice'),
+		$openFile = $('#openFile'),
+		$shutdown = $('#shutdown');
+	
+	
+	
+	
+	
+	
+	ipcRenderer.send('getSetting'); // 发送获取设置请求
+	
+	ipcRenderer.on('receive', function(event, setting){ // 接受设置
+		console.log('receive');
+		setting.playVoice ? $playVoice.attr('checked', true) : $playVoice.attr('checked', false);
+	//	setting.openFile ? $openFile.attr('checked', true) : $openFile.attr('checked', false);
+		setting.shutdown ? $shutdown.attr('checked', true) : $shutdown.attr('checked', false);			
+	});
+	
+	$playVoice.on('change', function() {		
+		ipcRenderer.send('playVoiceChange');
+	});
+	
+	$shutdown.on('change', function() {
+		ipcRenderer.send('shutdownChange');
+	});
+	
+	function init() {
+		$openFile.attr('disabled', true);
+	}
+	
+	
+	
+	
+	
+});
+	
+</script>
+	</body>
+</html>

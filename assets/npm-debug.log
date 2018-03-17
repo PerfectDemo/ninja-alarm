@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle ninja-alarm@1.0.0~prestart: ninja-alarm@1.0.0
+6 silly lifecycle ninja-alarm@1.0.0~prestart: no script for prestart, continuing
+7 info lifecycle ninja-alarm@1.0.0~start: ninja-alarm@1.0.0
+8 verbose lifecycle ninja-alarm@1.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle ninja-alarm@1.0.0~start: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;F:\doc\electron-api-demos-Zh_CN-master\electron\ninja-alarm\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;E:\AndroidSDK\sdk\tools\;E:\AndroidSDK\sdk\platform-tools\;D:\Program Files\Java\jdk1.8.0_101\bin;D:\Program Files\Java\jdk1.8.0_101\jre\bin;C:\Android;C:\Windows\System32;E:\DevTools\ideaIU-2017.2.1.win\bin;E:\DevTools\apache-maven-3.5.0\bin;D:\DevTools\mysql-5.7.9-winx64\mysql-5.7.9-winx64\bin;D:\python36;D:\python36\Scripts;D:\Program Files\Calibre2\;E:\Program Files\Git\cmd;D:\Python36\Scripts\;D:\Python36\;C:\Users\PerfectDemo\AppData\Local\Microsoft\WindowsApps;C:\Users\PerfectDemo\AppData\Roaming\npm;
+10 verbose lifecycle ninja-alarm@1.0.0~start: CWD: F:\doc\electron-api-demos-Zh_CN-master\electron\ninja-alarm
+11 silly lifecycle ninja-alarm@1.0.0~start: Args: [ '/d /s /c', 'electron .' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1022:11)
+12 verbose stack     at process.kill (internal/process.js:172:13)
+12 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:91:20)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:199:44)
+13 verbose cwd F:\doc\electron-api-demos-Zh_CN-master\electron\ninja-alarm\assets
+14 error Windows_NT 10.0.16299
+15 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+16 error node v6.10.0
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
