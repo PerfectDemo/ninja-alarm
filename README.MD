@@ -1,5 +1,5 @@
 # ninja-alarm
-一个基于electron实现的简单闹钟
+一个基于electron实现的简单闹钟（定时尚未完成）
 
 ## 运行
 ```
