@@ -19,7 +19,7 @@
   "author": "PerfectDemo",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.7.8",
+    "electron": "~9.1.0",
     "electron-packager": "^11.1.0"
   },
   "dependencies": {
